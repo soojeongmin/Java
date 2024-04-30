@@ -1,4 +1,4 @@
-package chap05_Array;
+package chap99_Homework.homework01;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class _00_Homework {
 
 	public static void main(String[] args) {
+		// 240429 Homework
 		/*
-		
 		// Advance 1
 		Scanner sc = new Scanner(System.in);
 		int money = sc.nextInt();
@@ -66,7 +66,7 @@ public class _00_Homework {
 		else if(money>=10) ten = (money%50)/10;
 		else System.out.println("최소 금액을 넣어주세요.");
 		System.out.println("<오만원 "+fiftyThousand+"매, 만원 "+tenThousand+"매, 오천원 "+fiveThousand+
-				"매, 천원 "+oneThousand+"매, 500원 "+fiveHundred+"개, 100원 "+oneHundred+"개, 10원 "+ten+"개>");
+				"매, 천원 "+oneThousand+"매, 500원 "+fiveHundred+"개, 100원 "+oneHundred+"개, 50원 "+fifty+"개, 10원 "+ten+"개>");
 		
 		
 		// Advance 2
