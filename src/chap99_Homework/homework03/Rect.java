@@ -18,6 +18,6 @@ public class Rect {
 	}
 	
 	public int circumference() {
-		return this.width+this.height;
+		return (this.width+this.height)*2;
 	}
 }
