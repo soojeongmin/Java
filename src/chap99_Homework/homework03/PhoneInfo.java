@@ -10,6 +10,7 @@ public class PhoneInfo {
 		// 매개변수로 전달된 이름과 번호를 각각의 배열에 저장하는 기능 구현
 		this.names[index] = name;
 		this.phoneNums[index] = phoneNum;
+		index++;
 	}
 
 	public void printAllPhoneInfo() {
