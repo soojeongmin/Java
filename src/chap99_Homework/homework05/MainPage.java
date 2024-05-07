@@ -11,7 +11,8 @@ public class MainPage {
 		System.out.println("1. 학생정보 입력");
 		System.out.println("2. 학생정보 검색");
 		System.out.println("3. 전체 학생 정보 출력");
-		System.out.println("4. 종료");
+		System.out.println("4. 학과별 성적 순위");
+		System.out.println("5. 종료");
 		
 		selectMenu(sc, stArr);
 	}
@@ -40,6 +41,8 @@ public class MainPage {
 				printStudentInfo.printAllStudentInfo(index, stArr);
 				break;
 			} else if(menuSelect == 4) {
+				
+			} else if(menuSelect == 5) {
 				System.out.println("프로그램을 종료합니다.");
 				System.exit(0);
 			} else {
