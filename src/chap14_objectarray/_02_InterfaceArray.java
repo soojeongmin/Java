@@ -1,7 +1,7 @@
 package chap14_objectarray;
 
 import chap14_objectarray.car.CarInterface;
-import chap14_objectarray.car.HuyndaiCar;
+import chap14_objectarray.car.HyundaiCar;
 import chap14_objectarray.car.KiaCar;
 
 public class _02_InterfaceArray {
@@ -18,7 +18,7 @@ public class _02_InterfaceArray {
 		// 2. 인터페이스 배열에 값 저장
 		// 인터페이스는 객체를 만들 수가 없기 때문에
 		// 인터페이스 배열의 요소에는 인터페이스를 상속받은 자식 객체가 저장된다.
-		carInterfaceArr[0] = new HuyndaiCar("제네시스", 5000, "검정");
+		carInterfaceArr[0] = new HyundaiCar("제네시스", 5000, "검정");
 		carInterfaceArr[1] = new KiaCar("k9", 5000, "흰색");
 		
 		// 3. 인터페이스 배열의 값 사용
@@ -30,17 +30,6 @@ public class _02_InterfaceArray {
 		for(CarInterface carInterface : carInterfaceArr) {
 			carInterface.carInfo();
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 	}

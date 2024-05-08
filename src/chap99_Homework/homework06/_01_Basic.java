@@ -60,9 +60,23 @@ public class _01_Basic {
 		String iint = "" + alpha[3] + alpha[7] + alpha[11];
 		System.out.println(bit + " " + com + " " + sql + " " + iint);
 		
+		bit = "bit";
+		com = "com";
+		sql = "sql";
+		iint = "int";
+		char[] charArr2 = new char[12];
+		bit = bit.concat(com);
+		bit = bit.concat(sql);
+		bit = bit.concat(iint);
+		charArr2 = bit.toCharArray();
+		for(char c: charArr2) {
+			System.out.print(c+" ");
+		}
+		System.out.println();
+		
 		// middle 3
 		int money = 10000;
-		int rate = 10;
+		double rate = 0.1;
 		int years = 10;
 		
 		double result = Math.pow(1+(rate/100), years) * money;
