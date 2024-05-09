@@ -10,9 +10,9 @@ public class _02_Middle {
 		sb1.append("hello");
 		int remainBufferSize = sb1.capacity() - sb1.length();
 		for (int i = 1; i <= remainBufferSize; i++) {
-			if(i%3==0) sb1.append("t");
-			else if(i%2==0) sb1.append("i");
-			else if(i%1==0)sb1.append("b");
+			if(i%3==2) sb1.append("t");
+			else if(i%3==1) sb1.append("i");
+			else if(i%3==0)sb1.append("b");
 		}
 		System.out.println(sb1);
 		
