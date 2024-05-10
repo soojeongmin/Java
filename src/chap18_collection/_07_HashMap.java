@@ -3,6 +3,7 @@ package chap18_collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class _07_HashMap {
@@ -12,6 +13,22 @@ public class _07_HashMap {
 		// Map은 Key, Value 쌍으로 데이터 (엔트리)가 저장되기 때문에
 		// 제네릭타입도 Key, Value두 개를 지정해야 한다.
 		Map<String, String> carMap = new HashMap<>();
+		/*
+		 * {
+		 * 		"1": new Car(),
+		 * 		"2": 1234,
+		 * 		"3" {1,2,3,4,5},
+		 * 		"4": [
+		 * 				new Car(),
+		 * 				new Car(),
+		 * 				...
+		 * 			 ]
+		 * 
+		 * }
+		 */
+		
+		// List<Map<String, String>>
+		
 		// 2. Map에 데이터추가
 		// put(key, value): key, value 한 쌍의 엔트리를 생성해서 Map에 저장
 		// key, value 모두 Map을 생성할 때 지정한 제네릭 타입의 값을 넣어줘야 한다.
@@ -52,6 +69,39 @@ public class _07_HashMap {
 			System.out.println(key);
 			System.out.println(carMap.get(key));
 		}
+		
+		// 6. entrySet 활용하기
+		// key, value값을 모두 모르는 상태고 다 확인하고 싶을 때
+		
+		// entrySet 메소드를 사용하면 Set<Entry> 형태로 리턴되고
+		// Set<Entry> 의 형태는 
+		/*
+		 * [
+		 * 		{company: 현대},
+		 * 		{model: 제네시스},
+		 * 		{price: 5000},
+		 * 		{color: 검정}
+		 * ]
+		 */
+		Set<Entry<String, String>> entrySet = carMap.entrySet();
+		Iterator<Entry<String, String>> entryIterator = entrySet.iterator();
+		
+		while(entryIterator.hasNext()) {
+			Entry<String, String> entry = entryIterator.next();
+			// Entry의 getKey, getValue 메소드
+			// getKey: Entry 객체에 담겨있는 Key를 리턴하는 메소드
+			// getValue: Entry 객체에 담겨있는 Value를 리턴하는 메소드
+			System.out.println(entry.getKey());
+			System.out.println(entry.getValue());
+			if(entry.getKey().equals("price")) {
+				// setValue: Entry 객체에 담겨있는 Value 값 변경
+				entry.setValue("6000");
+			}
+		}	
+		
+		// carMap.put("price", 6000); // 같은 내용
+		
+		
 	}
 
 }

@@ -13,6 +13,7 @@ public class _03_Advance {
 	public static void main(String[] args) {
 		// Advance 01
 		Scanner sc = new Scanner(System.in);
+		/*
 		Calendar cal1 = Calendar.getInstance();
 		cal1.set(2001, 11, 19);
 
@@ -140,6 +141,7 @@ public class _03_Advance {
 		for (int i = 0; i < 6; i++)
 			list.add(sc.nextInt());
 		Collections.sort(list);
+		*/
 
 		// Advance 04
 		List<Integer> intList2 = new ArrayList<>();
