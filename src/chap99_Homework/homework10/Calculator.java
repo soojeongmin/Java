@@ -24,20 +24,5 @@ public class Calculator<T extends Number> {
 	public void setT2(T t2) {
 		this.t2 = t2;
 	}
-	
-	public double add() {
-		return Math.round((t1.doubleValue() + t2.doubleValue()) * 100) / (double)100;
-	}
-	
-	public double sub() {
-		return Math.round((t1.doubleValue() - t2.doubleValue()) * 100) / (double)100;
-	}
-	
-	public double mul() {
-		return Math.round((t1.doubleValue() * t2.doubleValue()) * 100) / (double)100;
-	}
-	
-	public double div() {
-		return Math.round((t1.doubleValue() / t2.doubleValue()) * 100) / (double)100;
-	}
+
 }

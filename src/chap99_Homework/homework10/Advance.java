@@ -15,12 +15,14 @@ public class Advance {
 		System.out.println("일수를 구하고 싶은 년도를 입력하세요.");
 		int year = sc.nextInt();
 		
-		MONTH[] monthArr = MONTH.values();
+		// MONTH[] monthArr = MONTH.values();
+		MONTH month = MONTH.JAN;
+		System.out.println(month.sumDays(2020));
 		
-		for(MONTH m : monthArr) {
-			System.out.println(year + "년도의 1월~" + m.getMonth() + "월까지의 일수는 " 
-					+ m.sumDays(year) + "일입니다.");
-		}
+		//for(MONTH m : monthArr) {
+		//	System.out.println(year + "년도의 1월~" + m.getMonth() + "월까지의 일수는 " 
+		//			+ m.sumDays(year) + "일입니다.");
+		//}
 
 		sc.close();
 	}

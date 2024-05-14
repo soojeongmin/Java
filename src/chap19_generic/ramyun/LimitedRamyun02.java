@@ -4,7 +4,7 @@ package chap19_generic.ramyun;
 // extends, super 키워드를 이용해서 제한을 걸 수 있다.
 // <T extends 부모클래스>: 부모클래스를 상속받은 자식클래스만 타입으로 지정가능. 부모클래스도 타입으로 지정가능
 // <T super 자식클래스>: 자식클래스에게 상속해준 부모클래스까지만 타입으로 지정가능. 자식클래스도 타입으로 지정가능
-public class LimitedRamyun02<T super Gimchi> {
+public class LimitedRamyun02<T> {
 	private T t;
 
 	public T getT() {

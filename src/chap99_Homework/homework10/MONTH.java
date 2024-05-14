@@ -10,18 +10,18 @@ public enum MONTH {
 	private int normalDates;
 	private int yoonDates;
 	
+	MONTH(int month, int normalDates, int yoonDates) {
+		this.month = month;
+		this.normalDates = normalDates;
+		this.yoonDates = yoonDates;
+	}
+	
 	public int getMonth() {
 		return month;
 	}
 
 	public void setMonth(int month) {
 		this.month = month;
-	}
-
-	MONTH(int month, int normalDates, int yoonDates) {
-		this.month = month;
-		this.normalDates = normalDates;
-		this.yoonDates = yoonDates;
 	}
 	
 	public int getNormalDates() {
@@ -45,7 +45,7 @@ public enum MONTH {
 		
 		MONTH[] monthArr = MONTH.values();
 		
-		if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+		if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) { // ifLeap
 			for(int i = 1; i <= this.getMonth(); i++) {
 				dates += monthArr[i - 1].getYoonDates();
 			}
