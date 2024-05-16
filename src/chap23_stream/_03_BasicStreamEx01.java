@@ -2,7 +2,7 @@ package chap23_stream;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.stream.IntStream;
 
 import chap23_stream.car.HyundaiCar;
 
@@ -19,10 +19,19 @@ public class _03_BasicStreamEx01 {
 		
 		// 스트림을 이용해서 hCarList에 있는 아반떼만 모여있는 리스트 새로 만들기
 		List<HyundaiCar> avanteList = hCarList.stream().filter(HyundaiCar -> HyundaiCar.getModel().equals("아반떼")).toList();
-
-		for(int i=0;i<avanteList.size();i++) {
-			System.out.println(avanteList.get(i).getModel() + ", " + avanteList.get(i).getPrice());
-		}
+		
+		// mapToInt(): int만 모여있는 스트림으로 변환
+		IntStream priceStream = hCarList.stream().filter(HyundaiCar -> HyundaiCar.getModel().equals("아반떼")).mapToInt(avante->avante.getPrice());
+		
+		
+//		for(int i=0;i<avanteList.size();i++) {
+//			System.out.println(avanteList.get(i).toString());
+//		}
+		
+		// avanteList.toString();
+		
+		int priceSum = priceStream.sum();
+		System.out.println("총가격:"+priceSum);
 	}
 
 }
