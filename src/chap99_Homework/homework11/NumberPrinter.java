@@ -16,6 +16,7 @@ public class NumberPrinter {
 		for (int i = this.num; i <= 50; i++) {
 			if (i % 3 == 0 && i != 0) {
 				System.out.println("np1: "+i);
+				
 				notify();
 				try {
 					wait();
@@ -31,9 +32,10 @@ public class NumberPrinter {
 		for (int i = this.num; i <= 100; i++) {
 			if (i % 5 == 0 && i % 7 == 0 && i != 0) {
 				System.out.println("np2: "+i);
-				//Thread.yield();
+				// Thread.yield();
 				notify();
 				try {
+					
 					wait();
 				} catch(InterruptedException ie) {
 					System.out.println(ie.getMessage());
