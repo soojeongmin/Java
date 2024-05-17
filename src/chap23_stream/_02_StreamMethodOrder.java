@@ -9,6 +9,7 @@ public class _02_StreamMethodOrder {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		List<String> strList = new ArrayList<>();
+		
 		strList.add("java");
 		strList.add("html");
 		strList.add("oracle");
@@ -24,7 +25,7 @@ public class _02_StreamMethodOrder {
 		// 최종처리 단계 메소드는 메소드의 리턴 타입이 Stream이 아닌 메소드이다.
 		
 		// 2-1. 중간처리
-		// 중간처리 메소드는 여러번 사용할 수 있다.
+		// 중간 처리 메소드는 여러번 사용할 수 있다.
 		Stream<String> javaStream = strStream.filter(str -> str.contains("java"));
 		
 		// 2-2. 최종처리
@@ -32,6 +33,23 @@ public class _02_StreamMethodOrder {
 		List<String> javaList = javaStream.toList();
 		
 		System.out.println(javaList);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }

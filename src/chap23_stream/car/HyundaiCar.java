@@ -3,11 +3,11 @@ package chap23_stream.car;
 public class HyundaiCar {
 	private String model;
 	private int price;
-	
+
 	public HyundaiCar() {
-		
+
 	}
-	
+
 	public HyundaiCar(String model, int price) {
 		this.model = model;
 		this.price = price;
@@ -33,6 +33,9 @@ public class HyundaiCar {
 	public String toString() {
 		return "HyundaiCar [model=" + model + ", price=" + price + "]";
 	}
-	
-	
+
+	public void carInfo() {
+		System.out.println("모델: " + this.model);
+		System.out.println("가격: " + this.price);
+	}
 }

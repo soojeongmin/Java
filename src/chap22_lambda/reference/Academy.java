@@ -44,9 +44,8 @@ public class Academy {
 	}
 	
 	public void lectureInfo() {
-		System.out.println("과목: "+this.subject);
-		System.out.println("학생수: "+this.studentCnt);
-		System.out.println("강의시간: "+this.lectureTime);
-
+		System.out.println("과목: " + this.subject);
+		System.out.println("학생수: " + this.studentCnt);
+		System.out.println("강의시간: " + this.lectureTime);
 	}
 }
